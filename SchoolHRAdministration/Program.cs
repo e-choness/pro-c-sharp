@@ -21,13 +21,6 @@ class Program
         List<IEmployee> employees = new List<IEmployee>();
         SeedData(employees);
 
-        // foreach (var employee in employees)
-        // {
-        //     totalSalaries += employee.Salary;
-        // }
-        //
-        // Console.WriteLine($"Total Annual Salaries (including bonus): {totalSalaries}");
-        
         Console.WriteLine($"Total Annual Salaries (including bonus):{employees.Sum(e => e.Salary)}");
         Console.ReadKey();
     }
