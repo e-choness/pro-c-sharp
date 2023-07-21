@@ -17,4 +17,9 @@ The content below is learning notes.
 - .NET Core: UWP, ASP.NET Core - Base Libraries: CoreFx Class Library
 - Xamarin: Xamarin.iOS, Xamarin.Android, Xamarin.Forms, Xamarin.Mac - Base Libraries: Mono Class Library
 - [x] .Net Standard Library: One library to rule them all later introduced by Microsoft
-- [ ]
+- [x] Delegates: a type safe function pointer, a reference type variable that can hold a reference to a method in order to delegate to reference a particular method. 
+- The delegate must define parameters with types that match the parameter types contained in the relevant method.
+- A delegate must also define a return type that matches the return type of the relevant method.
+- Whenever a delegate is instantiated, its instance can be associated with any method with compatible parameters and return type that can be invoked or called through the delegate instance.
+- Basically multiple methods can be invoked or called thorugh one delegate call.
+- [ ] Variance: 
