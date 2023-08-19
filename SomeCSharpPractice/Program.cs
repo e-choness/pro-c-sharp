@@ -15,9 +15,15 @@ static class Program
         
         // Inheritance in C#, abstract class indicates missing components and it is to be completed via inheritance classes 
         AbstractClasses.ShowResult();
-        
-        // ToString() can also be overridden
+         
+        // ToString() can also be overridden.
         ToStringOverride.DisplayResult();
+
+		// Generics are like Templates in C++, put <T> to describe a particular datatype and using the same logic.
+		GenericArray.DisplayArrays();
+        
+        // Threading uses System.Threading each thread can run at the same time and Thread can take lambda expressions.
+        MultiThreading.RunThreads();
     }
     
 }
