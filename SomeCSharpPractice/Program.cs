@@ -13,7 +13,8 @@ static class Program
         // Output A 2D array values
         TwoDimenArray twoDimenArray = new TwoDimenArray();
         
-        
+        // Inheritance in C#, abstract class indicates missing components and it is to be completed via inheritance classes 
+        AbstractClasses.ShowResult();
     }
     
 }
