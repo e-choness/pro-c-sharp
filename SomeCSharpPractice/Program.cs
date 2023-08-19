@@ -15,6 +15,9 @@ static class Program
         
         // Inheritance in C#, abstract class indicates missing components and it is to be completed via inheritance classes 
         AbstractClasses.ShowResult();
+        
+        // ToString() can also be overridden
+        ToStringOverride.DisplayResult();
     }
     
 }
