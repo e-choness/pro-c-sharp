@@ -15,8 +15,9 @@ public static class DelegateEvents
         Callback callback1 = methodClass.Method1;
         Callback callback2 = methodClass.Method2;
         Callback handler = DelegateMethod;
+        Callback callbackLambda = message => { Console.WriteLine($"This is from lambda {message}"); };
 
-        Callback allDelegates = callback1 + callback2 + handler;
+        Callback allDelegates = callback1 + callback2 + handler+callbackLambda;
         allDelegates("Hello delegates!");
         MethodWithCallback(3,4, allDelegates);
         
