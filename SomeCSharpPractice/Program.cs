@@ -23,7 +23,9 @@ static class Program
 		GenericArray.DisplayArrays();
         
         // Threading uses System.Threading each thread can run at the same time and Thread can take lambda expressions.
-        MultiThreading.RunThreads();
+        // MultiThreading.RunThreads();
+        
+        DelegateEvents.DisplayCallbackHandlerResult();
     }
     
 }
