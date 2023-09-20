@@ -20,6 +20,8 @@ public static class DelegateEvents
         allDelegates("Hello delegates!");
         MethodWithCallback(3,4, allDelegates);
         
+        Console.WriteLine($"The number of aggregated delegates are: {allDelegates.GetInvocationList().GetLength(0)}");
+        
         Console.WriteLine("Removing callback 1.");
         allDelegates -= callback1;
         allDelegates("Goodbye callback 1");
