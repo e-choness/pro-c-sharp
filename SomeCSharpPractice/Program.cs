@@ -26,6 +26,7 @@ static class Program
         // MultiThreading.RunThreads();
         
         DelegateEvents.DisplayCallbackHandlerResult();
+        PublisherSubscriber.DisplayResult();
     }
     
 }
