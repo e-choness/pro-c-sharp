@@ -1,6 +1,6 @@
 ﻿namespace SomeCSharpPractice;
 
-public class PublisherSubscriber
+public static class PublisherSubscriber
 {
     public static void DisplayResult()
     {
@@ -10,8 +10,6 @@ public class PublisherSubscriber
         
         Console.WriteLine("The publisher is DOING THE THING.");
         publisher.DoTheThing();
-        
-        
     }
 }
 
@@ -26,6 +24,7 @@ class MyEventArgs : EventArgs
 
 class Publisher
 {
+    // Events are 
     public event EventHandler<MyEventArgs> RaiseMyEvent;
 
     public void DoTheThing()
@@ -50,9 +49,15 @@ class Publisher
 class Subscriber
 {
     private readonly string _id;
-
+    
+    private System.Tuple<int, Action<object, MyEventArgs>>[] scores;
     public Subscriber(string id, Publisher publisher)
     {
+        scores = new Tuple<int,  Action<object, MyEventArgs>>[] {
+            new Tuple<int, Action<object, MyEventArgs>>(1, HandleMyEvent),
+            new Tuple<int, Action<object, MyEventArgs>>(2, HandleMyEvent)
+        };
+        
         _id = id;
         publisher.RaiseMyEvent += HandleMyEvent;
     }
