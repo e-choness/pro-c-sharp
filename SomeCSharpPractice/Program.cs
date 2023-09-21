@@ -27,6 +27,8 @@ static class Program
         
         DelegateEvents.DisplayCallbackHandlerResult();
         PublisherSubscriber.DisplayResult();
+        
+        BaseDerivative.DisplayResult();
     }
     
 }
