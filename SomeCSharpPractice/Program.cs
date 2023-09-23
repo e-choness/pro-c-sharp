@@ -29,6 +29,8 @@ static class Program
         PublisherSubscriber.DisplayResult();
         
         BaseDerivative.DisplayResult();
+        
+        EventInterfaces.DisplayResult();
     }
     
 }
