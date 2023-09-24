@@ -2,8 +2,9 @@
 
 public class AbstractClasses
 {
-    public static void ShowResult()
+    public static void ShowResult1()
     {
+        Console.WriteLine("Computer Parts...");
         ComputerPart mouse = new Mouse();
         mouse.WriteDescription();
         ComputerPart keyboard = new Keyboard();
@@ -13,29 +14,25 @@ public class AbstractClasses
 
 public abstract class ComputerPart
 {
-    private string Name => "Computer Part";
     public virtual void WriteDescription()
     {
-        Console.WriteLine($"This is a {Name}.");
+        Console.WriteLine($"This is a {nameof(ComputerPart)}.");
     }
     
 }
 
 public class Mouse : ComputerPart
 {
-    private string Name => "Mouse";
     public override void WriteDescription()
     {
-        Console.WriteLine($"This is a {Name}.");
+        Console.WriteLine($"This is a {nameof(Mouse)}.");
     }
 }
 
 public class Keyboard : ComputerPart
 {
-    private string Name => "Keyboard";
-
     public override void WriteDescription()
     {
-        Console.WriteLine($"This is a {Name}.");
+        Console.WriteLine($"This is a {nameof(Keyboard)}.");
     }
 }

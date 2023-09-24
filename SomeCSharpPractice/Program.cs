@@ -14,7 +14,7 @@ static class Program
         TwoDimenArray twoDimenArray = new TwoDimenArray();
         
         // Inheritance in C#, abstract class indicates missing components and it is to be completed via inheritance classes 
-        AbstractClasses.ShowResult();
+        AbstractClasses.ShowResult1();
          
         // ToString() can also be overridden.
         ToStringOverride.DisplayResult();
