@@ -32,7 +32,9 @@ static class Program
   //       
   //       EventInterfaces.DisplayResult();
         
-        OperatorOverload.ShowResult();
+        // OperatorOverload.ShowResult();
+
+        DictionaryRemove.ShowResult();
     }
     
 }
