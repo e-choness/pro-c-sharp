@@ -34,10 +34,12 @@ static class Program
         
         // OperatorOverload.ShowResult();
 
-        DictionaryRemove.ShowResult();
-
-        AsyncFunctions asyncFunctions = new();
-        asyncFunctions.DisplayResult();
+        // DictionaryRemove.ShowResult();
+        //
+        // AsyncFunctions asyncFunctions = new();
+        // asyncFunctions.DisplayResult();
+        
+        LinqSomething.DisplayResult();
     }
     
 }
