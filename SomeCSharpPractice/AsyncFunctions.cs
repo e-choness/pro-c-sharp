@@ -11,6 +11,11 @@ public class AsyncFunctions
         WaitForNSecond(10);
     }
 
+    // public async DisplayResultAlt()
+    // {
+    //     await GetUserAsync()
+    // }
+
     async void CountToTenAsync()
     {
         Console.WriteLine("Let's start counting.");
@@ -35,6 +40,35 @@ public class AsyncFunctions
         Console.WriteLine($"Give me another {n} seconds.");
         await Task.Delay(n * Second);
         Console.WriteLine("Ok, we are good to go.");
+    }
+
+    /*
+     * If the work you have is I/O-bound, use async and await without Task.Run.
+     * You should not use the Task Parallel Library.
+     * If the work you have is CPU-bound and you care about responsiveness,
+     * use async and await, but spawn off the work on another thread with Task.Run.
+     * If the work is appropriate for concurrency and parallelism,
+     * also consider using the Task Parallel Library.
+     */
+
+    class User
+    {
+        public int Id { get; set; }
+    }
+    private static async Task<User> GetUserAsync(int userId)
+    {
+        return await Task.FromResult(new User() { Id = userId });
+    }
+
+    private static async Task<IEnumerable<User>> GetUserAsync(IEnumerable<int> userIds)
+    {
+        var getUserTasks = new List<Task<User>>();
+        foreach (var userId in userIds)
+        {
+            getUserTasks.Add(GetUserAsync(userId));
+        }
+
+        return await Task.WhenAll(getUserTasks);
     }
 }
 
