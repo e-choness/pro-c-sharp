@@ -39,7 +39,8 @@ static class Program
         // AsyncFunctions asyncFunctions = new();
         // asyncFunctions.DisplayResult();
         
-        LinqSomething.DisplayResult();
+        // LinqSomething.DisplayResult();
+        XmlStuff.GetResult();
     }
     
 }
