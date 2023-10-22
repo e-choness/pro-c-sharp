@@ -40,7 +40,9 @@ static class Program
         // asyncFunctions.DisplayResult();
         
         // LinqSomething.DisplayResult();
-        XmlStuff.GetResult();
+        // XmlStuff.GetResult();
+        InternalInheritance internalInheritance = new InternalInheritance();
+        internalInheritance.DisplayResult();
     }
     
 }

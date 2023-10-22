@@ -15,7 +15,7 @@ public class XmlStuff
         var content = XElement.Load(@"D:\projects\advanced-csharp-practice\SomeCSharpPractice\example.xml");
         var filteredContent = new XElement("example",
             from element in content.Elements()
-            where (int)element is 'Wood'
+            where (int)element >= 80
             select element);
         
         Console.WriteLine(filteredContent);
