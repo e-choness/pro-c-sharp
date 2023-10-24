@@ -41,8 +41,11 @@ static class Program
         
         // LinqSomething.DisplayResult();
         // XmlStuff.GetResult();
-        InternalInheritance internalInheritance = new InternalInheritance();
-        internalInheritance.DisplayResult();
+        // InternalInheritance internalInheritance = new InternalInheritance();
+        // internalInheritance.DisplayResult();
+
+        IterateClassProperties iterateClassProperties = new();
+        iterateClassProperties.DisplayResult();
     }
     
 }
