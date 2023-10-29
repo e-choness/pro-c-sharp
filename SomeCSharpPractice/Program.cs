@@ -44,8 +44,9 @@ static class Program
         // InternalInheritance internalInheritance = new InternalInheritance();
         // internalInheritance.DisplayResult();
 
-        IterateClassProperties iterateClassProperties = new();
-        iterateClassProperties.DisplayResult();
+        // IterateClassProperties iterateClassProperties = new();
+        // iterateClassProperties.DisplayResult();
+        SimpleIterator.DisplayResult();
     }
     
 }
