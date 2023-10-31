@@ -1,4 +1,5 @@
 using BankLibrary;
+using NuGet.Frameworks;
 
 namespace BankTest;
 
@@ -32,6 +33,16 @@ public class BankAccountTests
 
         var account = new BankAccount("Mr. Bryan Walton", beginningBalance);
 
-        Assert.Throws<ArgumentOutOfRangeException>(() => { account.Debit(debitAmount); });
+        try
+        {
+            account.Debit(debitAmount);
+        }
+        catch (ArgumentOutOfRangeException e)
+        {
+            StringAssert.Contains(e.Message, BankAccount.DebitAmountExceedsBalanceMessage);
+            return;
+        }
+        
+        Assert.Fail("The expected exception was not thrown.");
     }
 }
