@@ -38,4 +38,5 @@ The content below is learning notes.
 
 ---
 
-- [X] .NET MVC: 
+- [ ] Rest API:
+- Exploring basics.
