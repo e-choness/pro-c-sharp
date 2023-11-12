@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using WebServiceAPI.Models;
 
 namespace WebServiceAPI.Controllers;
 
@@ -29,16 +30,4 @@ public class WeatherForecastController : ControllerBase
             })
             .ToArray();
     }
-
-    // [HttpGet(Name = "GetMoreWeatherForecast")]
-    // public IEnumerable<WeatherForecast> GetMore()
-    // {
-    //     return Enumerable.Range(1, 10).Select(index => new WeatherForecast
-    //         {
-    //             Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-    //             TemperatureC = Random.Shared.Next(-40, 45),
-    //             Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-    //         })
-    //         .ToArray();
-    // }
 }
