@@ -17,10 +17,10 @@ public class TodoScaffold : ControllerBase
 
     // GET: api/TodoScaffold
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodoItems()
+    public async Task<ActionResult<IEnumerable<TodoItemDTO>>> GetTodoItems()
     {
         if (_context.TodoItems == null) return NotFound();
-        return await _context.TodoItems.ToListAsync();
+        return await _context.TodoItems.Select(x=>ItemToDTO(x)).ToListAsync();
     }
 
     // GET: api/TodoScaffold/5
