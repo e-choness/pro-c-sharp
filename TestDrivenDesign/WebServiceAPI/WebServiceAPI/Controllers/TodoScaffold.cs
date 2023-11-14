@@ -19,7 +19,6 @@ public class TodoScaffold : ControllerBase
     [HttpGet]
     public async Task<ActionResult<IEnumerable<TodoItemDTO>>> GetTodoItems()
     {
-        if (_context.TodoItems == null) return NotFound();
         return await _context.TodoItems.Select(x => ItemToDTO(x)).ToListAsync();
     }
 
@@ -28,7 +27,6 @@ public class TodoScaffold : ControllerBase
     [HttpGet("{id}")]
     public async Task<ActionResult<TodoItemDTO>> GetTodoItem(long id)
     {
-        if (_context.TodoItems == null) return NotFound();
         var todoItem = await _context.TodoItems.FindAsync(id);
 
         if (todoItem == null) return NotFound();
@@ -44,8 +42,6 @@ public class TodoScaffold : ControllerBase
     public async Task<IActionResult> PutTodoItem(long id, TodoItemDTO todoDTO)
     {
         if (id != todoDTO.Id) return BadRequest();
-
-        _context.Entry(todoDTO).State = EntityState.Modified;
         
         var todoItem = await _context.TodoItems.FindAsync(id);
         if (todoItem == null) return NotFound();
@@ -92,7 +88,6 @@ public class TodoScaffold : ControllerBase
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteTodoItem(long id)
     {
-        if (_context.TodoItems == null) return NotFound();
         var todoItem = await _context.TodoItems.FindAsync(id);
         if (todoItem == null) return NotFound();
 
