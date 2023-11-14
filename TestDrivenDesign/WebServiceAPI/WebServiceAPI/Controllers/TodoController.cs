@@ -6,11 +6,11 @@ namespace WebServiceAPI.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class TodoScaffold : ControllerBase
+public class TodoController : ControllerBase
 {
     private readonly TodoContext _context;
 
-    public TodoScaffold(TodoContext context)
+    public TodoController(TodoContext context)
     {
         _context = context;
     }
