@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebServiceAPI.Models;
 
 namespace WebServiceAPI.Controllers;
 
-[Route("[controller]")]
+[Route("api/[controller]")]
 [ApiController]
 public class RecipeController : ControllerBase
 {
@@ -33,23 +34,35 @@ public class RecipeController : ControllerBase
     }
 
     [HttpGet("GetRecipes")]
-    public ActionResult GetRecipes()
+    public ActionResult GetRecipes([FromQuery]int count)
     {
-        var recipes = new []{ "Oxtail", "Curry Chicken", "Dumplings" };
+        Recipe[] recipes =
+        {
+            new(){Title="Oxtail"}, 
+            new(){Title="Curry Chicken"},
+            new(){Title="Dumplings"}
+        };
     
         if (!recipes.Any()) return NotFound();
-        return Ok(recipes);
+        
+        // Sanity check
+        if (count > recipes.Length) count = recipes.Length;
+        
+        return Ok(recipes.Take(count));
     }
 
-    // [HttpPost]
-    // public ActionResult CreateNewRecipe()
-    // {
-    //     return null;
-    // }
-
-    [HttpDelete]
-    public ActionResult DeleteRecipes()
+    [HttpPost("CreateRecipe")]
+    public ActionResult CreateNewRecipe([FromBody] Recipe newRecipe)
     {
+        bool somethingBadHappened = false;
+        if (somethingBadHappened) return BadRequest();
+
+        return Created("", newRecipe);
+    }
+
+    [HttpDelete("{id}")]
+    public ActionResult DeleteRecipes(long id)
+    {// id get passed along here
         var somethingBadHappened = false;
 
         if (somethingBadHappened) return BadRequest();
