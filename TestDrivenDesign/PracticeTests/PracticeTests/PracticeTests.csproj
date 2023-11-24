@@ -19,6 +19,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\..\SomeCSharpPractice\SomeCSharpPractice.csproj" />
+      <ProjectReference Include="..\PracticeLib\PracticeLib.csproj" />
     </ItemGroup>
 
 </Project>
