@@ -4,6 +4,7 @@
     &lt;TestAncestor&gt;&#xD;
       &lt;TestId&gt;NUnit3x::9F60B474-A7FB-4C78-B7FF-4CB07530BCC8::net7.0::PracticeTests.EnumToBasicTypesTests.TestReturnShip&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;NUnit3x::9F60B474-A7FB-4C78-B7FF-4CB07530BCC8::net7.0::PracticeTests.EmailValidatorTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::9F60B474-A7FB-4C78-B7FF-4CB07530BCC8::net7.0::PracticeTests.EnumTests.EnumToStringTest&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
     &lt;ProjectFile&gt;9F60B474-A7FB-4C78-B7FF-4CB07530BCC8/f:VesselSystemTest.cs&lt;/ProjectFile&gt;&#xD;
   &lt;/Or&gt;&#xD;
