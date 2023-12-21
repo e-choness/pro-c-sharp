@@ -28,7 +28,7 @@ namespace SolidLibrary.Services
         {
             IsSoldOut = true;
             _logger.LogMessage($"Complete sale for {Game.Id} - {Game.Title}.");
-            _messageSender.SendMessage(Game, $"{Store} of {Game.Id} - {Game.Title} is sold out. Total revenue {Revenue}");
+            _messageSender.SendMessage(this, $"{Game.Id} - {Game.Title} is sold out. Total revenue {Revenue}");
         }
     }
 }

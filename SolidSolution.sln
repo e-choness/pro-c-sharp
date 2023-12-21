@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInversion", "Depe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenClosedPrinciple", "OpenClosedPrinciple\OpenClosedPrinciple.csproj", "{C7E2778D-5A74-4735-A948-77197AA0F32D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiskovSubstitutionPrinciple", "LiskovSubstitutionPrinciple\LiskovSubstitutionPrinciple.csproj", "{F5EB8911-6330-44AD-A670-AC9CB7059EB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{C7E2778D-5A74-4735-A948-77197AA0F32D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7E2778D-5A74-4735-A948-77197AA0F32D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7E2778D-5A74-4735-A948-77197AA0F32D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5EB8911-6330-44AD-A670-AC9CB7059EB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5EB8911-6330-44AD-A670-AC9CB7059EB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5EB8911-6330-44AD-A670-AC9CB7059EB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5EB8911-6330-44AD-A670-AC9CB7059EB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

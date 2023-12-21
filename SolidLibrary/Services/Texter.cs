@@ -5,9 +5,9 @@ namespace SolidLibrary.Services
 {
     public class Texter : IMessageSender
     {
-        public void SendMessage(IProduct product, string message)
+        public void SendMessage(IVendor vendor, string message)
         {
-            Console.WriteLine($"{product.Id} - {product.Title} is sending text: {message}");
+            Console.WriteLine($"{vendor.Store} is sending text: {message}");
         }
     }
 }

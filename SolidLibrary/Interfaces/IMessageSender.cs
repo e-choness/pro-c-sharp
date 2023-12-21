@@ -2,6 +2,6 @@ namespace SolidLibrary.Interfaces
 {
     public interface IMessageSender
     {
-        void SendMessage(IProduct product, string message);
+        void SendMessage(IVendor retailer, string message);
     }
 }
