@@ -1,34 +1,34 @@
 using System;
-using SolidLibrary.Models;
+using SolidLibrary.Interfaces;
 
 namespace SolidLibrary.Services
 {
-    public class Retailer
+    public class Retailer : IVendor
     {
         public string Store { get; set; }
-        public Game Product { get; set; }
-        public double Revenue { get; set; }
+        public IProduct Game { get; set; }
+        public double Revenue { get; private set; }
         public bool IsSoldOut { get; private set; }
 
-        private Logger _logger;
-        private Mailer _mailer;
+        private ILogger _logger;
+        private IMessageSender _messageSender;
 
-        public Retailer(Logger logger, Mailer mailer)
+        public Retailer(ILogger logger, IMessageSender messageSender)
         {
             _logger = logger;
-            _mailer = mailer;
+            _messageSender = messageSender;
         }
         public void SellGame(double price)
         {
             Revenue += price;
-            _logger.LogMessage($"{Product.Id} is sold at {price} bucks - {DateTime.Now}");
+            _logger.LogMessage($"{Game.Id} is sold at {price} bucks - {DateTime.Now}");
         }
 
         public void CompleteSale()
         {
             IsSoldOut = true;
-            _logger.LogMessage($"Complete sale for {Product.Id} - {Product.Title}:{Product.Subtitle}.");
-            _mailer.SendEmail(Product, $"{Store} of this game is sold out. Total revenue {Revenue}");
+            _logger.LogMessage($"Complete sale for {Game.Id}.");
+            _messageSender.SendMessage(Game, $"{Store} of this game is sold out. Total revenue {Revenue}");
         }
     }
 }

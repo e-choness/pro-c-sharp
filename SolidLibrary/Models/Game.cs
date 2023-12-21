@@ -1,6 +1,8 @@
-﻿namespace SolidLibrary.Models
+﻿using SolidLibrary.Interfaces;
+
+namespace SolidLibrary.Models
 {
-    public class Game
+    public class Game : IProduct
     {
         public int Id { get; set; }
         public string Title { get; set; }
