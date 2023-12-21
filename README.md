@@ -21,7 +21,11 @@ A good tech design solution before coding is always a good practice, make sure t
 Utilizing interfaces and factories to decouple dependencies from each of the classes.
 So that we can use each classes based on their abstractions rather than direct calls.
 
-### SOLID Library
+### Take Away
+
+In this case `IMessageSender` is decoupling `Texter` and `Mailer` from their dependencies for `Retailer`. When creating a new instance of `Retailer`, Both `Mailer` and `Texter` can be used for its constructor, no need to override or modify the class directly and worry about modifying the other parts of the program ending up break anything.
+
+## SOLID Library
 
 | Interface | Class | Description |
 |---|---|---|
@@ -33,7 +37,3 @@ So that we can use each classes based on their abstractions rather than direct c
 |  | `GameValidator` | A service that validates game copy information. |
 |  | `StandardMessager` | A service that holds application messages |
 |  | `WishlistRecorder` | A service that record game copy information to a wishlist |
-
-### Take Away
-
-In this case IMessageSender is decoupling Texter and Mailer from their dependencies for Retailer. When creating a new instance of Retailer, Both Mailer and Texter can be used for its constructor, no need to override or modify the class directly and worry about modifying the other parts of the program ending up break anything.
