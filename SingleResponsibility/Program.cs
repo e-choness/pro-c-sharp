@@ -2,7 +2,9 @@
 using SolidLibrary.Services;
 
 // Start the application with a welcome message
-StandardMessager.ApplicationStartMessage();
+StandardMessager.WishlistRecorderStartMessage();
+
+StandardMessager.SeparatorMessage();
 
 // Create a record of Baldur's Gate 3
 Game game = (Game)Factory.CreateGame();
@@ -14,7 +16,7 @@ game.Price = 70.00f;
 // Validate the game's id and price
 if (!GameValidator.Validate(game))
 {
-    StandardMessager.ApplicationEndMessage();
+    StandardMessager.WishlistRecorderEndMessage();
     return -1;
 }
 
@@ -22,7 +24,9 @@ if (!GameValidator.Validate(game))
 RolePlayingGame rpgBaldur = (RolePlayingGame)WishlistRecorder.CreateWishlistedRPG(game);
 WishlistRecorder.Record(rpgBaldur);
 
-StandardMessager.ApplicationEndMessage();
+StandardMessager.SeparatorMessage();
+
+StandardMessager.WishlistRecorderEndMessage();
 
 return 0;
 

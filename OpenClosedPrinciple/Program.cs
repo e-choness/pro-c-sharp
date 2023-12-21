@@ -2,7 +2,9 @@
 using SolidLibrary.Services;
 
 // Start the application with welcome message
-StandardMessager.ApplicationStartMessage();
+StandardMessager.WishlistRecorderStartMessage();
+
+StandardMessager.SeparatorMessage();
 
 // Create a copy of System Shock
 IProduct systemShock = Factory.CreateGame();
@@ -45,5 +47,6 @@ foreach (var listedGame in wishlist)
     WishlistRecorder.Record(listedGame);
 }
 
+StandardMessager.SeparatorMessage();
 // End the application with goodbye message
-StandardMessager.ApplicationEndMessage();
+StandardMessager.WishlistRecorderEndMessage();
