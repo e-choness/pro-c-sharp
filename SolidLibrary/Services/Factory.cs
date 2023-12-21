@@ -10,36 +10,6 @@ namespace SolidLibrary.Services
             return new Game();
         }
 
-        public static IWishlisted CreateWishlistedFPS(IProduct game)
-        {
-            return new FirstPersonShooter
-            {
-                Id = game.Id,
-                Title = game.Title,
-                Price = game.Price
-            };
-        }
-
-        public static IWishlisted CreateWishlistedRPG(IProduct game)
-        {
-            return new RolePlayingGame
-            {
-                Id = game.Id,
-                Title = game.Title,
-                Price = game.Price
-            };
-        }
-
-        public static IWishlisted CreateWishlistedRTS(IProduct game)
-        {
-            return new RealTimeStrategy
-            {
-                Id = game.Id,
-                Title = game.Title,
-                Price = game.Price
-            };
-        }
-
         public static IVendor CreateRetailer()
         {
             return new Retailer(CreateLogger(), CreateMailer());

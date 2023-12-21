@@ -46,6 +46,7 @@
         <Compile Include="Interfaces\IWishlisted.cs" />
         <Compile Include="Models\FirstPersonShooter.cs" />
         <Compile Include="Models\Game.cs" />
+        <Compile Include="Models\ImmersiveSims.cs" />
         <Compile Include="Models\RealTimeStrategy.cs" />
         <Compile Include="Models\RolePlayingGame.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>

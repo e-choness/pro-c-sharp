@@ -19,7 +19,7 @@ if (!GameValidator.Validate(game))
 }
 
 // Create a wishlist record and add it to the wishlist recorder
-RolePlayingGame rpgBaldur = (RolePlayingGame)Factory.CreateWishlistedRPG(game);
+RolePlayingGame rpgBaldur = (RolePlayingGame)WishlistRecorder.CreateWishlistedRPG(game);
 WishlistRecorder.Record(rpgBaldur);
 
 StandardMessager.ApplicationEndMessage();
