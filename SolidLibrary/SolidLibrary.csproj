@@ -45,10 +45,14 @@
         <Compile Include="Interfaces\IVendor.cs" />
         <Compile Include="Models\Game.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="Services\Factory.cs" />
+        <Compile Include="Services\GameValidator.cs" />
         <Compile Include="Services\Logger.cs" />
         <Compile Include="Services\Mailer.cs" />
         <Compile Include="Services\Retailer.cs" />
+        <Compile Include="Services\StandardMessage.cs" />
         <Compile Include="Services\Texter.cs" />
+        <Compile Include="Services\WishlistRecorder.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
