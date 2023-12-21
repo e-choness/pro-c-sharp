@@ -2,7 +2,7 @@ using System;
 
 namespace SolidLibrary.Services
 {
-    public class StandardMessage
+    public class StandardMessager
     {
         public static void ApplicationStartMessage()
         {

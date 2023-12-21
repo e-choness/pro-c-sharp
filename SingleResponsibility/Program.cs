@@ -1,7 +1,7 @@
 ﻿using SolidLibrary.Models;
 using SolidLibrary.Services;
 
-StandardMessage.ApplicationStartMessage();
+StandardMessager.ApplicationStartMessage();
 
 Game game = (Game)Factory.CreateGame();
 game.Id = "0002";
@@ -11,13 +11,13 @@ game.Price = 70.00f;
 
 if (!GameValidator.Validate(game))
 {
-    StandardMessage.ApplicationEndMessage();
+    StandardMessager.ApplicationEndMessage();
     return -1;
 }
 
 WishlistRecorder.Record(game);
 
-StandardMessage.ApplicationEndMessage();
+StandardMessager.ApplicationEndMessage();
 
 return 0;
 

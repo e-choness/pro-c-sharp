@@ -50,7 +50,7 @@
         <Compile Include="Services\Logger.cs" />
         <Compile Include="Services\Mailer.cs" />
         <Compile Include="Services\Retailer.cs" />
-        <Compile Include="Services\StandardMessage.cs" />
+        <Compile Include="Services\StandardMessager.cs" />
         <Compile Include="Services\Texter.cs" />
         <Compile Include="Services\WishlistRecorder.cs" />
     </ItemGroup>

@@ -8,13 +8,13 @@ namespace SolidLibrary.Services
         {
             if (string.IsNullOrWhiteSpace(game.Id))
             {
-                StandardMessage.ValidateErrorMessage($"Game Id: {game.Id}");
+                StandardMessager.ValidateErrorMessage($"Game Id: {game.Id}");
                 return false;
             }
 
             if (game.Price < 0.0f)
             {
-                StandardMessage.ValidateErrorMessage($"Game price: {game.Price} dollars");
+                StandardMessager.ValidateErrorMessage($"Game price: {game.Price} dollars");
                 return false;
             }
             
