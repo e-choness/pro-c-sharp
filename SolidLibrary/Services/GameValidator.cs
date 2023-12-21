@@ -8,7 +8,7 @@ namespace SolidLibrary.Services
         {
             if (string.IsNullOrWhiteSpace(game.Id))
             {
-                StandardMessager.ValidateErrorMessage($"Game Id: {game.Id}");
+                StandardMessager.ValidateErrorMessage($"Game Id: {game.Id} Titel: {game.Title}");
                 return false;
             }
 

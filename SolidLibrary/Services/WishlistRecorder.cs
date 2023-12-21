@@ -5,9 +5,10 @@ namespace SolidLibrary.Services
 {
     public class WishlistRecorder
     {
-        public static void Record(IProduct game)
+        public static void Record(IWishlisted game)
         {
-            Console.WriteLine($"Add {game.Id} at {game.Price}$ to wishlist.");
+            game.IsWishlisted = true;
+            Console.WriteLine($"Add {game.Id} - {game.Title}of {game.Genre} at {game.Price}$ to wishlist.");
         }
     }
 }

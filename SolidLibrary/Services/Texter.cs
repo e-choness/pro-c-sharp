@@ -7,7 +7,7 @@ namespace SolidLibrary.Services
     {
         public void SendMessage(IProduct product, string message)
         {
-            Console.WriteLine($"{product.Id} is sending text: {message}");
+            Console.WriteLine($"{product.Id} - {product.Title} is sending text: {message}");
         }
     }
 }

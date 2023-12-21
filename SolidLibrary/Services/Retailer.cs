@@ -21,14 +21,14 @@ namespace SolidLibrary.Services
         public void SellGame(double price)
         {
             Revenue += price;
-            _logger.LogMessage($"{Game.Id} is sold at {price} bucks - {DateTime.Now}");
+            _logger.LogMessage($"{Game.Id} - {Game.Title} is sold at {price} bucks - {DateTime.Now}");
         }
 
         public void CompleteSale()
         {
             IsSoldOut = true;
-            _logger.LogMessage($"Complete sale for {Game.Id}.");
-            _messageSender.SendMessage(Game, $"{Store} of this game is sold out. Total revenue {Revenue}");
+            _logger.LogMessage($"Complete sale for {Game.Id} - {Game.Title}.");
+            _messageSender.SendMessage(Game, $"{Store} of {Game.Id} - {Game.Title} is sold out. Total revenue {Revenue}");
         }
     }
 }
