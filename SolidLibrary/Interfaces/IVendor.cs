@@ -4,11 +4,7 @@ namespace SolidLibrary.Interfaces
     {
         string Store { get; set; }
         IProduct Game { get; set; }
-        double Revenue
-        {
-            get => Revenue;
-            set => Revenue = value;
-        }
+        double Revenue { get; set; }
         bool IsSoldOut { get; set; }
     }
 }

@@ -7,8 +7,8 @@ namespace SolidLibrary.Services
     {
         public string Store { get; set; }
         public IProduct Game { get; set; }
-        public double Revenue { get; private set; }
-        public bool IsSoldOut { get; private set; }
+        public double Revenue { get; set; }
+        public bool IsSoldOut { get; set; }
 
         private ILogger _logger;
         private IMessageSender _messageSender;

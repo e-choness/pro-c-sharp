@@ -1,6 +1,5 @@
 ﻿using System;
 using SolidLibrary.Interfaces;
-using SolidLibrary.Models;
 
 namespace SolidLibrary.Services
 {
