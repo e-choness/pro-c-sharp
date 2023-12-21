@@ -1,10 +1,9 @@
-﻿using DependencyInversion;
-using SolidLibrary.Models;
+﻿using SolidLibrary.Models;
 using SolidLibrary.Services;
 
 // Create a game called Starfield
 Game game = (Game)Factory.CreateGame();
-game.Id = 0;
+game.Id = "0001";
 game.Title = "Starfield";
 game.Subtitle = "";
 game.Price = 70.0f;
