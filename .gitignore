@@ -85,4 +85,7 @@ fabric.properties
 bin
 obj
 
+# C# Framework and Solutions
+Folder.DotSettings.user
+
 # End of https://www.toptal.com/developers/gitignore/api/rider
