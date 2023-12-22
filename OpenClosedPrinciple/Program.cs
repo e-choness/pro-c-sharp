@@ -47,6 +47,6 @@ foreach (var listedGame in wishlist)
     WishlistRecorder.Record(listedGame);
 }
 
-StandardMessager.SeparatorMessage();
+
 // End the application with goodbye message
 StandardMessager.WishlistRecorderEndMessage();

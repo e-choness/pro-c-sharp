@@ -31,6 +31,21 @@ For this example
 
 Another way to achieve open close principle is to use virtual and override to make sure the code doesn't repeat the same part over and over again. In this example however, it works in this scale.
 
+## :cyclone: Liskov Substitution Principle
+
+The principle's name doesn't help understand the concept of it at all 😕. But sitting through it's definition, it all comes down to help programmers to structure readable and expandable code using better inheritance methods.
+
+For this example
+
+- `Personnel` is the base class has all the common traits of any employees of the store system. Have a contract `IPersonnel` helps to create a base interface that enforces `Personnel` to implement all the members needed.
+- `IManager` can have a hashset of team members that are marked as `IManaged`.
+- `IManaged` members only apply to the ones that have a manager above the hireracy, and one manager can be assigned via any models that have `IManager` as contract.
+- Both `IManager` and `IMananged` are inherited from `IPersonnel`, because interfaces cannot directly inherit from concrete class, this is an extra step to make sure those contracts have the base class properties.
+
+### :pencil2: Take Away
+
+Keep specific traits separated from the base class helps reduce redundancies from badly designed inheritance structure. Some objects do not necessarily inherit from the same class, only share the same traits. It would be better to take those traits out and have a interface to indicate them.
+
 ## :gem: Dependency Inversion
 
 Utilizing interfaces and factories to decouple dependencies from each of the classes.
@@ -53,6 +68,10 @@ In this case `IMessageSender` is decoupling `Texter` and `Mailer` from their dep
 | `IWishlisted` | `FirstPersonShooter` | First Person Shooter info model |
 | `IWishlisted` | `RealTimeStrategy` | Real Time Strategy info model |
 | `IWishlisted` | `ImmersiveSims` | Immersive Sims info model |
+| `IPersonnel` | `Personnel` | A base model for store employees |
+| `IManaged` | `Receptionist` | A model for receptionist |
+| `IManaged` `IManager`| `StoreSupervisor` | A model for store supervisor |
+| `IManager` | `StoreOverseer` | A model for store overseer |
 |  | `GameValidator` | A service that validates game copy information. |
 |  | `StandardMessager` | A service that holds application messages |
 |  | `WishlistRecorder` | A service that record game copy information to a wishlist |
