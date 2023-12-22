@@ -11,13 +11,13 @@ namespace SolidLibrary.Models
         
         public void HourlyRateCheck(float hourlyRate)
         {
-            if (hourlyRate > 30.0f || hourlyRate < 0.0f)
+            if (hourlyRate > 300.0f || hourlyRate < 0.0f)
             {
                 throw new OverflowException($"Employee {FirstName} {LastName} hourly rate is not legit.");
             }
         }
 
-        public void CalculateHourlyRate(float multiplier)
+        public void CalculateHourlyRate(float multiplier = 1.0f)
         {
             var hourlyRate = Salary * multiplier / 40;
             try

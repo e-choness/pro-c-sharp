@@ -24,6 +24,16 @@ namespace SolidLibrary.Services
             Console.WriteLine("Thank you for visiting our Game Store. Press Enter to exit...");
         }
 
+        public static void PersonnelSystemStartMessage()
+        {
+            Console.WriteLine("Welcome to Personnel System.");
+        }
+
+        public static void PersonnelSystemEndMessage()
+        {
+            Console.WriteLine("Thank you for using Personnel System. Press Enter to exit...");
+        }
+
         public static void ValidateErrorMessage(string sender)
         {
             Console.WriteLine($"Failed to validate {sender}");

@@ -2,8 +2,7 @@
 {
     public interface IManaged
     {
-        string Manager { get; set; }
-        
+        IManager Manager { get; set; }
         void AssignManager(IManager manager);
     }
 }
