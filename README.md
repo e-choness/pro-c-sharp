@@ -31,6 +31,14 @@ For this example
 
 Another way to achieve open close principle is to use virtual and override to make sure the code doesn't repeat the same part over and over again. In this example however, it works in this scale.
 
+## :cyclone: Liskov Substitution Principle
+
+The principle's name doesn't help understand the concept of it at all 😕. But sitting through it's definition, it all comes down to help programmers to structure readable and expandable code using better inheritance methods.
+
+
+
+### :pencil2: Take Away
+
 ## :gem: Dependency Inversion
 
 Utilizing interfaces and factories to decouple dependencies from each of the classes.
