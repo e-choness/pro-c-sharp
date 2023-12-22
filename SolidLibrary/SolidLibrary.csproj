@@ -39,21 +39,29 @@
         <Reference Include="System.Xml"/>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Interfaces\IDigitalCopy.cs" />
+        <Compile Include="Interfaces\IGotyEdition.cs" />
         <Compile Include="Interfaces\ILogger.cs" />
         <Compile Include="Interfaces\IManaged.cs" />
         <Compile Include="Interfaces\IManager.cs" />
         <Compile Include="Interfaces\IMessageSender.cs" />
         <Compile Include="Interfaces\IPersonnel.cs" />
+        <Compile Include="Interfaces\IPhysicalCopy.cs" />
         <Compile Include="Interfaces\IProduct.cs" />
+        <Compile Include="Interfaces\ISpecialEdition.cs" />
+        <Compile Include="Interfaces\IStandardEdition.cs" />
         <Compile Include="Interfaces\IVendor.cs" />
         <Compile Include="Interfaces\IWishlisted.cs" />
         <Compile Include="Models\FirstPersonShooter.cs" />
         <Compile Include="Models\Game.cs" />
+        <Compile Include="Models\GotyFullGame.cs" />
         <Compile Include="Models\ImmersiveSims.cs" />
         <Compile Include="Models\Personnel.cs" />
         <Compile Include="Models\RealTimeStrategy.cs" />
         <Compile Include="Models\Receptionist.cs" />
         <Compile Include="Models\RolePlayingGame.cs" />
+        <Compile Include="Models\SpecialPhysicalGame.cs" />
+        <Compile Include="Models\StandardDigitalGame.cs" />
         <Compile Include="Models\StoreOverseer.cs" />
         <Compile Include="Models\StoreSupervisor.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
