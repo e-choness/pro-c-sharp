@@ -46,6 +46,21 @@ For this example
 
 Keep specific traits separated from the base class helps reduce redundancies from badly designed inheritance structure. Some objects do not necessarily inherit from the same class, only share the same traits. It would be better to take those traits out and have a interface to indicate them.
 
+## :dizzy_face: Interface segregation
+
+Instead of a gigantic definition of one class that has all the members and methods in one definition. Divide and conquer each pieces of them so that we can create monstrosities little by little, just kidding...
+
+For this example
+
+- `IDigitalCopy` and `IPhysicalCopy` are implemented with different purchasing information. Digital copies are often done in online transactions, so keep record of transaction id and customer email makes sense. Physical copies can be purchased in stores and online, they both have receipts and often customer phone numbers are contact info.
+- `IStandardEdition` is the base interface that holds only bare minimum information of a game copy.
+- `ISpecialEdition` inherits from `IStandardEdition` with some more little gadgets. :sleepy:
+- `IGotyEdition` further inherits from `ISpecialEdition` with even more juicy stuff. Then you will see the monstrosity that is `GotyFullGame` that got out of this contract.
+
+### :pencil2: Take Away
+
+Interface segregation is a useful tool to implement the only parts that are necessary for creating models and components and get rid of the parts that are not needed.
+
 ## :gem: Dependency Inversion
 
 Utilizing interfaces and factories to decouple dependencies from each of the classes.
@@ -77,6 +92,9 @@ Make sure the functionalities are contained within the classes and have them han
 | `IManaged` | `Receptionist` | A model for receptionist. |
 | `IManaged` `IManager`| `StoreSupervisor` | A model for store supervisor. |
 | `IManager` | `StoreOverseer` | A model for store overseer. |
+| `IDigitalCopy` `IStandardEdition` | `StandardDigitalGame` | Standard edition digital game definition inherited from `Game` |
+| `IPhysicalCopy` `ISpecialEdition` | `SpecialPhysicalGame` | Special edition physical game copy definition inherited from `Game` |
+| `IPhysicalCopy` `IDigital` `IGotyEdition` | `GotyFullGame` | What a monstrosity I've created... Geez :satisfied: |
 |  | `GameValidator` | A service that validates game copy information. |
 |  | `StandardMessager` | A service that holds application messages. |
 |  | `WishlistRecorder` | A service that record game copy information to a wishlist. |
