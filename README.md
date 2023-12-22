@@ -51,9 +51,14 @@ Keep specific traits separated from the base class helps reduce redundancies fro
 Utilizing interfaces and factories to decouple dependencies from each of the classes.
 So that we can use each classes based on their abstractions rather than direct calls.
 
+For this example
+
+- `IMessageSender` is decoupling `Texter` and `Mailer` from their dependencies for `Retailer`.
+- When creating a new instance of `Retailer`, Both `Mailer` and `Texter` can be used for its constructor, no need to override or modify the class directly and worry about modifying the other parts of the program ending up break anything.
+
 ### :pencil2: Take Away
 
-In this case `IMessageSender` is decoupling `Texter` and `Mailer` from their dependencies for `Retailer`. When creating a new instance of `Retailer`, Both `Mailer` and `Texter` can be used for its constructor, no need to override or modify the class directly and worry about modifying the other parts of the program ending up break anything.
+Make sure the functionalities are contained within the classes and have them handle what is their supposed responsibilities. Avoid direct dependencies and instantiations as much as possible so that the modules are reusable for development, production and tests.
 
 ## :book: SOLID Library
 
@@ -64,14 +69,14 @@ In this case `IMessageSender` is decoupling `Texter` and `Mailer` from their dep
 | `IMessageSender` | `Texter` | Sending sales message through text message. |
 | `IVendor` | `Retailer` | Manage sales and stocks. |
 | `IProduct` | `Game` | A model that helds game copy information. |
-| `IWishlisted` | `RolePlayingGame` | Role Playing Game info model |
-| `IWishlisted` | `FirstPersonShooter` | First Person Shooter info model |
-| `IWishlisted` | `RealTimeStrategy` | Real Time Strategy info model |
-| `IWishlisted` | `ImmersiveSims` | Immersive Sims info model |
-| `IPersonnel` | `Personnel` | A base model for store employees |
-| `IManaged` | `Receptionist` | A model for receptionist |
-| `IManaged` `IManager`| `StoreSupervisor` | A model for store supervisor |
-| `IManager` | `StoreOverseer` | A model for store overseer |
+| `IWishlisted` | `RolePlayingGame` | Role Playing Game info model. |
+| `IWishlisted` | `FirstPersonShooter` | First Person Shooter info model. |
+| `IWishlisted` | `RealTimeStrategy` | Real Time Strategy info model. |
+| `IWishlisted` | `ImmersiveSims` | Immersive Sims info model. |
+| `IPersonnel` | `Personnel` | A base model for store employees. |
+| `IManaged` | `Receptionist` | A model for receptionist. |
+| `IManaged` `IManager`| `StoreSupervisor` | A model for store supervisor. |
+| `IManager` | `StoreOverseer` | A model for store overseer. |
 |  | `GameValidator` | A service that validates game copy information. |
-|  | `StandardMessager` | A service that holds application messages |
-|  | `WishlistRecorder` | A service that record game copy information to a wishlist |
+|  | `StandardMessager` | A service that holds application messages. |
+|  | `WishlistRecorder` | A service that record game copy information to a wishlist. |
