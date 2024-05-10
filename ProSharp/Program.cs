@@ -3,3 +3,6 @@
 EnvironmentArgsProvider.ShowEnvironmentDetails();
 // BasicIO.BasicConsole();
 StringFormatters.FormatNumericalData();
+Objects.FunctionalitiesShowcase();
+NumericalData.DataTypeFunctionality();
+SystemChar.CharFunctionality();
