@@ -1,4 +1,4 @@
-﻿namespace ProSharp;
+﻿namespace ProSharp.IO;
 
 public class BasicIO
 {

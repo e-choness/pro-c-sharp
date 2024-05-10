@@ -1,4 +1,4 @@
-﻿namespace ProSharp;
+﻿namespace ProSharp.CommonTypeSystem;
 
 public class StringFormatters
 {
