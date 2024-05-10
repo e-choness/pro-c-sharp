@@ -1,6 +1,7 @@
 ﻿using ProSharp.CommonTypeSystem;
 using ProSharp.DateTimes;
 using ProSharp.IO;
+using ProSharp.TypeConversions;
 
 EnvironmentArgsProvider.ShowEnvironmentDetails();
 // BasicIO.BasicConsole();
@@ -25,3 +26,5 @@ BasicStrings.StringEquality();
 BasicStrings.EqualWithRules();
 BasicStrings.Immutable();
 BasicStrings.UseBuilder();
+
+Bytes.ProcessBytes();
