@@ -20,3 +20,4 @@ BigInts.UseBigInteger();
 
 BasicStrings.Functionalities();
 BasicStrings.ShowConcatenation();
+BasicStrings.InterpolatedHandle();

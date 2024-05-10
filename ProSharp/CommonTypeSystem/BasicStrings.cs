@@ -1,4 +1,6 @@
-﻿namespace ProSharp.CommonTypeSystem;
+﻿using System.Runtime.CompilerServices;
+
+namespace ProSharp.CommonTypeSystem;
 
 public class BasicStrings
 {
@@ -22,5 +24,22 @@ public class BasicStrings
         var s2 = "PsychoDrill (PTP)";
         var s3 = s1 + s2;
         Console.WriteLine(s3);
+    }
+
+    public static void InterpolatedHandle()
+    {
+        Console.WriteLine("=> String interpolation under the covers: \a");
+        var age = 4;
+        var name = "Soren";
+        var builder = new DefaultInterpolatedStringHandler(3, 2);
+        
+        builder.AppendLiteral("\tHello ");
+        builder.AppendFormatted(name);
+        builder.AppendLiteral(" you are ");
+        builder.AppendFormatted(age);
+        builder.AppendLiteral(" years old.");
+
+        var greeting = builder.ToStringAndClear();
+        Console.WriteLine(greeting);
     }
 }
