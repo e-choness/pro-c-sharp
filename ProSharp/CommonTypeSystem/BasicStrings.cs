@@ -1,4 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
+using System.Text;
 
 namespace ProSharp.CommonTypeSystem;
 
@@ -41,5 +42,65 @@ public class BasicStrings
 
         var greeting = builder.ToStringAndClear();
         Console.WriteLine(greeting);
+    }
+
+    public static void StringEquality()
+    {
+        Console.WriteLine("=> String equality:");
+        var s1 = "Hello!";
+        string s2 = "Yo!";
+        
+        Console.WriteLine("s1 = {0}", s1);
+        Console.WriteLine("s2 = {0}", s2);
+        Console.WriteLine();
+        
+        // Test the strings for equality
+        Console.WriteLine("s1 == s2 {0}", s1 == s2);
+        Console.WriteLine("s1 == Hello! {0}", s1 == "Hello!");
+        Console.WriteLine("s1 = HELLO! {0}", s1 == "HELLO!");
+        Console.WriteLine("s1 == hello! {0}", s1 == "hello!");
+        Console.WriteLine("s1.Equals(s2) {0}", s1.Equals(s2));
+        Console.WriteLine("Yo!.Equals(s2) {0}", "Yo!".Equals(s2));
+    }
+
+    public static void EqualWithRules()
+    {
+        Console.WriteLine("=> String equality case insensitive: ");
+        var s1 = "Hello!";
+        var s2 = "HELLO!";
+        Console.WriteLine("s1 = {0}", s1);
+        Console.WriteLine("s2 = {0}",s2);
+        Console.WriteLine();
+        
+        Console.WriteLine("Default rules: s1={0}, s2={1}s1.Equals(s2): {2}", s1, s2, s1.Equals(s2));
+        Console.WriteLine("Ignore case: s1.Equals(s2, StringComparison.OrdinalIgnoreCase): {0}", s1.Equals(s2, StringComparison.OrdinalIgnoreCase));
+        Console.WriteLine("Ignore case: s1.Equals(s2, StringComparison.InvariantCultureIgnoreCase): {0}", s1.Equals(s2, StringComparison.InvariantCultureIgnoreCase));
+        Console.WriteLine("Default rules: s1={0},s2={1} s1.IndexOf(\"E\"): {2}", s1, s2, s1.IndexOf("E"));
+        Console.WriteLine("Ignore case: s1.IndexOf(\"E\", StringComparison.OrdinalIgnoreCase): {0}", s1.IndexOf("E", StringComparison.OrdinalIgnoreCase));
+    }
+
+    public static void Immutable()
+    {
+        Console.WriteLine("=> Immutable strings \a");
+        string s2 = "My string";
+        s2 = "My new string";
+        Console.WriteLine(s2);
+    }
+
+    public static void UseBuilder()
+    {
+        Console.WriteLine("=> Using the StringBuilder");
+
+        var sb = new StringBuilder("**** Awesome Games ****");
+        sb.Append("\n");
+        sb.AppendLine("Half Life");
+        sb.AppendLine("Morrowind");
+        sb.AppendLine("Deus Ex " + "2");
+        sb.AppendLine("System Shock");
+        
+        Console.WriteLine(sb.ToString());
+        sb.Replace("2", "Invisible War");
+        Console.WriteLine(sb.ToString());
+        Console.WriteLine("sb has {0} chars.", sb.Length);
     }
 }

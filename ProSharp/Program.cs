@@ -21,3 +21,7 @@ BigInts.UseBigInteger();
 BasicStrings.Functionalities();
 BasicStrings.ShowConcatenation();
 BasicStrings.InterpolatedHandle();
+BasicStrings.StringEquality();
+BasicStrings.EqualWithRules();
+BasicStrings.Immutable();
+BasicStrings.UseBuilder();
