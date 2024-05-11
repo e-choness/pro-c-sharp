@@ -1,4 +1,5 @@
-﻿using ProSharp.CommonTypeSystem;
+﻿using ProSharp;
+using ProSharp.CommonTypeSystem;
 using ProSharp.DateTimes;
 using ProSharp.IO;
 using ProSharp.LINQ;
@@ -31,3 +32,7 @@ BasicStrings.UseBuilder();
 Bytes.ProcessBytes();
 
 LinqOperations.LinqQueryOverInts();
+
+SwitchCase.PatternMatchWithWhen();
+SwitchCase.ChooseColor();
+SwitchCase.PlayRockPaperScissors();
