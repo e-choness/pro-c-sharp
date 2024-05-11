@@ -1,4 +1,4 @@
-﻿namespace ProSharp;
+﻿namespace ProSharp.Conditions;
 
 public class SwitchCase
 {
@@ -56,7 +56,7 @@ public class SwitchCase
             ("paper", "scissors") => "Scissors wins.",
             ("scissors", "rock") => "Rock wins.",
             ("scissors", "paper") => "Scissors wins.",
-            (_, _) => "Tie.",
+            (_, _) => "Tie."
         };
     }
 
