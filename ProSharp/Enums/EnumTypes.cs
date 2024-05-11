@@ -15,6 +15,15 @@ public enum EmployType : byte
     Contractor = 100,
     VicePresident = 9
 }
+
+[Flags]
+public enum ContactPreference
+{
+    None,
+    Email,
+    Phone,
+    Text
+}
 public class EnumTypes
 {
     public static void GetEnumType()
@@ -39,5 +48,15 @@ public class EnumTypes
     {
         Console.WriteLine("=> Show bonus to grunts");
         Console.WriteLine(AskForBonus(EmployType.Grunt));
+    }
+
+    public static void AskForContract()
+    {
+        var emailAndPhone = ContactPreference.Email | ContactPreference.Phone;
+        // This is different outcome from c sharp book
+        Console.WriteLine("None? {0}", (emailAndPhone | ContactPreference.None) == emailAndPhone); // True
+        Console.WriteLine("Email? {0}", (emailAndPhone | ContactPreference.Email) == emailAndPhone); // True
+        Console.WriteLine("Phone? {0}", (emailAndPhone | ContactPreference.Phone) == emailAndPhone); // True
+        Console.WriteLine("Text? {0}", (emailAndPhone | ContactPreference.Text) == emailAndPhone); // True
     }
 }
