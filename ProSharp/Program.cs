@@ -1,6 +1,7 @@
 ﻿using ProSharp.CommonTypeSystem;
 using ProSharp.Conditions;
 using ProSharp.DateTimes;
+using ProSharp.Enums;
 using ProSharp.IO;
 using ProSharp.Lambda;
 using ProSharp.LINQ;
@@ -42,3 +43,6 @@ SwitchCase.PlayRockPaperScissors();
 Expressions.AddTwoNumbers();
 
 MethodParams.ShowAverage();
+
+EnumTypes.GetEnumType();
+EnumTypes.ShowBonus();
