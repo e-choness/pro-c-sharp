@@ -1,6 +1,7 @@
 ﻿using ProSharp.CommonTypeSystem;
 using ProSharp.DateTimes;
 using ProSharp.IO;
+using ProSharp.LINQ;
 using ProSharp.TypeConversions;
 
 EnvironmentArgsProvider.ShowEnvironmentDetails();
@@ -28,3 +29,5 @@ BasicStrings.Immutable();
 BasicStrings.UseBuilder();
 
 Bytes.ProcessBytes();
+
+LinqOperations.LinqQueryOverInts();
