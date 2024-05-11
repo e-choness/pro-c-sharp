@@ -4,6 +4,7 @@ using ProSharp.DateTimes;
 using ProSharp.IO;
 using ProSharp.Lambda;
 using ProSharp.LINQ;
+using ProSharp.Parameters;
 using ProSharp.TypeConversions;
 
 EnvironmentArgsProvider.ShowEnvironmentDetails();
@@ -39,3 +40,5 @@ SwitchCase.ChooseColor();
 SwitchCase.PlayRockPaperScissors();
 
 Expressions.AddTwoNumbers();
+
+MethodParams.ShowAverage();
