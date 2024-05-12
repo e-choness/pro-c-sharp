@@ -56,3 +56,5 @@ ItemDistributor.Distribute();
 CarAssembler.Assemble();
 
 VehicleAssembler.Assemble();
+
+Canvas.Paint();
