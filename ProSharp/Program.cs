@@ -7,6 +7,7 @@ using ProSharp.Lambda;
 using ProSharp.LINQ;
 using ProSharp.Parameters;
 using ProSharp.PartialClasses;
+using ProSharp.Records;
 using ProSharp.TypeConversions;
 
 EnvironmentArgsProvider.ShowEnvironmentDetails();
@@ -50,3 +51,5 @@ EnumTypes.ShowBonus();
 EnumTypes.AskForContract();
 
 ItemDistributor.Distribute();
+
+CarAssembler.Assemble();
