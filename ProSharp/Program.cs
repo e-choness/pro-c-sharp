@@ -6,6 +6,7 @@ using ProSharp.IO;
 using ProSharp.Lambda;
 using ProSharp.LINQ;
 using ProSharp.Parameters;
+using ProSharp.PartialClasses;
 using ProSharp.TypeConversions;
 
 EnvironmentArgsProvider.ShowEnvironmentDetails();
@@ -47,3 +48,5 @@ MethodParams.ShowAverage();
 EnumTypes.GetEnumType();
 EnumTypes.ShowBonus();
 EnumTypes.AskForContract();
+
+ItemDistributor.Distribute();
