@@ -2,6 +2,7 @@
 using ProSharp.Conditions;
 using ProSharp.DateTimes;
 using ProSharp.Enums;
+using ProSharp.Interfaces;
 using ProSharp.IO;
 using ProSharp.Lambda;
 using ProSharp.LINQ;
@@ -53,3 +54,7 @@ EnumTypes.AskForContract();
 ItemDistributor.Distribute();
 
 CarAssembler.Assemble();
+
+VehicleAssembler.Assemble();
+
+Canvas.Paint();
