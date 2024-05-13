@@ -58,3 +58,4 @@ CarAssembler.Assemble();
 VehicleAssembler.Assemble();
 
 Canvas.Paint();
+Canvas.FillContent();
