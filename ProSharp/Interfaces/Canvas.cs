@@ -1,4 +1,6 @@
-﻿namespace ProSharp.Interfaces;
+﻿using System.Collections;
+
+namespace ProSharp.Interfaces;
 
 public class Canvas
 {
@@ -12,6 +14,17 @@ public class Canvas
         if (bitmap is IAdvancedDrawable iAdvDraw)
         {
             iAdvDraw.DrawUpsideDown(); // Will get default implementation if BitmapImage does not have the implementation
+        }
+    }
+
+    public static void FillContent()
+    {
+        Console.WriteLine("=> Having fun with a collection of different images");
+        var flexBox = new FlexBox();
+        var i = 1;
+        foreach (var image in flexBox)
+        {
+            Console.WriteLine($"No.{i++} is a {image.GetType().Name}");
         }
     }
 }
