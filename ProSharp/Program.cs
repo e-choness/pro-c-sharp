@@ -60,3 +60,6 @@ VehicleAssembler.SeeComparison();
 
 Canvas.Paint();
 Canvas.FillContent();
+
+Defaults.Set();
+Defaults.ImmediateExecution();
