@@ -1,4 +1,4 @@
-﻿namespace ProSharp.Lambda;
+﻿namespace ProSharp.LINQ;
 
 public class Defaults
 {
