@@ -8,6 +8,7 @@ using ProSharp.Lambda;
 using ProSharp.LINQ;
 using ProSharp.Parameters;
 using ProSharp.PartialClasses;
+using ProSharp.Processes;
 using ProSharp.Records;
 using ProSharp.TypeConversions;
 
@@ -65,3 +66,5 @@ Defaults.Set();
 Defaults.ImmediateExecution();
 
 TypeFilter.Filter();
+
+ProcessHandler.ListAll();
