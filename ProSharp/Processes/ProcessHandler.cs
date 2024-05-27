@@ -17,10 +17,10 @@ public class ProcessHandler
         Console.WriteLine("==============================\n");
     }
 
-    public static void WithID(int pId)
+    private static Process? WithId(int pId)
     {
-        Console.WriteLine($"=> Show threads in process: {pId}");
-        Process process = null;
+        
+        Process? process = null;
         try
         {
             process = Process.GetProcessById(pId);
@@ -28,18 +28,48 @@ public class ProcessHandler
         catch (ArgumentException ex)
         {
             Console.WriteLine(ex.Message);
-            return;
         }
         
-        Console.WriteLine("Here are the thread used by: {0}", process.ProcessName);
-        var threads = process.Threads;
+        Console.WriteLine("Here are the thread used by: {0}", process?.ProcessName);
 
-        foreach (ProcessThread thread in threads)
-        {
-            var info =
-                $"-> Thread ID: {thread.Id}\tStart Time: {thread.StartTime.ToShortTimeString()}\tPriority: {thread.PriorityLevel}";
-            Console.WriteLine(info);
-        }
+        return process;
+    }
+
+    public static void ShowThreads()
+    {
+        var pId = 9192;
+        Console.WriteLine($"=> Show threads in process: {pId}");
+
+        var process = WithId(pId);
+        
+        var threads = process?.Threads;
+        
+        if (threads != null)
+            foreach (ProcessThread thread in threads)
+            {
+                var info =
+                    $"-> Thread ID: {thread.Id}\tStart Time: {thread.StartTime.ToShortTimeString()}\tPriority: {thread.PriorityLevel}";
+                Console.WriteLine(info);
+            }
+
         Console.WriteLine("==================================\n");
+    }
+
+    public static void ShowModule()
+    {
+        var pId = 9124;
+        Console.WriteLine($"=> Show module of process: {pId}");
+
+        var process = WithId(pId);
+        ProcessModuleCollection? modules = process?.Modules;
+        if (modules != null)
+        {
+            foreach (ProcessModule module in modules)
+            {
+                var info = $"-> Mod Name: {module.ModuleName}";
+                Console.WriteLine(info);
+            }
+        }
+        Console.WriteLine("===================================\n");
     }
 }

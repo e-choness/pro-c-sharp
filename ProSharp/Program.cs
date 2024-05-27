@@ -68,4 +68,5 @@ Defaults.ImmediateExecution();
 TypeFilter.Filter();
 
 ProcessHandler.ListAll();
-ProcessHandler.WithID(4452);
+ProcessHandler.ShowModule();
+ProcessHandler.ShowThreads();
