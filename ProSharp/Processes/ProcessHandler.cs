@@ -16,4 +16,30 @@ public class ProcessHandler
         }
         Console.WriteLine("==============================\n");
     }
+
+    public static void WithID(int pId)
+    {
+        Console.WriteLine($"=> Show threads in process: {pId}");
+        Process process = null;
+        try
+        {
+            process = Process.GetProcessById(pId);
+        }
+        catch (ArgumentException ex)
+        {
+            Console.WriteLine(ex.Message);
+            return;
+        }
+        
+        Console.WriteLine("Here are the thread used by: {0}", process.ProcessName);
+        var threads = process.Threads;
+
+        foreach (ProcessThread thread in threads)
+        {
+            var info =
+                $"-> Thread ID: {thread.Id}\tStart Time: {thread.StartTime.ToShortTimeString()}\tPriority: {thread.PriorityLevel}";
+            Console.WriteLine(info);
+        }
+        Console.WriteLine("==================================\n");
+    }
 }
