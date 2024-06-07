@@ -28,7 +28,6 @@ TimeSpans.UseDateTimeOnly();
 
 BigInts.UseBigInteger();
 
-BasicStrings.Functionalities();
 BasicStrings.ShowConcatenation();
 BasicStrings.InterpolatedHandle();
 BasicStrings.StringEquality();

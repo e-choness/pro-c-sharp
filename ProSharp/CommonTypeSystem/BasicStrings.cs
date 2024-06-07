@@ -5,17 +5,36 @@ namespace ProSharp.CommonTypeSystem;
 
 public class BasicStrings
 {
-    public static void Functionalities()
+    public static string GetValueText(string input)
     {
-        Console.WriteLine("=> Basic String Functionality");
-        
-        const string firstName = "Freddy";
-        Console.WriteLine("Value of firstName: {0}", firstName);
-        Console.WriteLine("firstName has {0} characters.", firstName.Length);
-        Console.WriteLine("firstName in uppercase {0}", firstName.ToUpper());
-        Console.WriteLine("firstName in lowercase {0}", firstName.ToLower());
-        Console.WriteLine("firstName contains the letter y: {0}", firstName.Contains('y'));
-        Console.WriteLine("New first name: {0}", firstName.Replace("dy", ""));
+        return $"The value of input: {input}";
+    }
+
+    public static string GetLengthText(string input)
+    {
+        return $"The input {input} has {input.Length} characters.";
+    }
+
+    public static string GetUpperText(string input)
+    {
+        return $"The input {input} in uppercase {input.ToUpper()}";
+    }
+
+    public static string GetLowerText(string input)
+    {
+        return $"The input {input} in lowercase {input.ToLower()}";
+    }
+
+    public static string GetIsSubstringText(string input, string sub)
+    {
+        var containTesxt = input.Contains(sub) ? "contains" : "does not contain";
+        return $"The input {input} {containTesxt} {sub}";
+    }
+    
+    public static string GetReplaceText(string input, string newValue, string oldValue)
+    {
+        var newString = input.Replace(oldValue, newValue);
+        return $"The input {input}'s {oldValue} is replaced by {newValue}, the result is {newString}";
     }
 
     public static void ShowConcatenation()

@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceSegregation", "Int
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProSharp", "ProSharp\ProSharp.csproj", "{F681FF99-EBC7-4FF0-B6A2-7B4571051400}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProCSharpTests", "ProCSharpTests\ProCSharpTests.csproj", "{73F7627C-5125-44EA-AF57-17F4D9F5F991}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{F681FF99-EBC7-4FF0-B6A2-7B4571051400}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F681FF99-EBC7-4FF0-B6A2-7B4571051400}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F681FF99-EBC7-4FF0-B6A2-7B4571051400}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73F7627C-5125-44EA-AF57-17F4D9F5F991}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73F7627C-5125-44EA-AF57-17F4D9F5F991}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73F7627C-5125-44EA-AF57-17F4D9F5F991}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73F7627C-5125-44EA-AF57-17F4D9F5F991}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
