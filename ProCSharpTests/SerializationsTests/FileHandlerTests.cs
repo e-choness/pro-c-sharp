@@ -1,10 +1,9 @@
 ﻿using System.Text.Json;
 using ProSharp.Serializations;
-
-namespace ProCSharpTests.SerializationsTests;
 using System.IO.Abstractions;
 using System.IO.Abstractions.TestingHelpers;
 
+namespace ProCSharpTests.SerializationsTests;
 
 public class FileHandlerTests
 {
