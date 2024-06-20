@@ -10,9 +10,11 @@ public class View
         var person = ObjectFactory.GetPerson("James", true);
         
         Console.WriteLine("=========> My cars' data saved.");
-        FileHander<List<JamesBondCar>>.SaveAsJsonFormat(myCars, "CarData.json", true);
+        var fileHandler = new FileHandler<List<JamesBondCar>>();
+        fileHandler.SaveAsJsonFormat(myCars, "CarData.json", true);
         
         Console.WriteLine("=========> The person data saved.");
-        FileHander<Person>.SaveAsJsonFormat(person, "PersonData.json", true);
+        var fileHandler2 = new FileHandler<Person>();
+        fileHandler2.SaveAsJsonFormat(person, "PersonData.json", true);
     }
 }
