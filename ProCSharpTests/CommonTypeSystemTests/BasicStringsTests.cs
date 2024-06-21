@@ -1,6 +1,6 @@
 using ProSharp.CommonTypeSystem;
 
-namespace ProCSharpTests;
+namespace ProCSharpTests.CommonTypeSystemTests;
 
 public class BasicStringsTests
 {
