@@ -7,7 +7,7 @@ namespace ProCSharpTests.SerializationsTests;
 
 public class FileHandlerTests
 {
-    private readonly IFileSystem _fileSystem;
+    private readonly IFileSystem _fileSystem = new MockFileSystem();
     
     private class TestClass
     {
@@ -15,20 +15,9 @@ public class FileHandlerTests
         public string? Name { get; set; }
     }
 
-    private static TestClass Get()
-    {
-        return new TestClass { Id = 1, Name = "Test" };
-    }
-
-    private static string GetFileName()
-    {
-        return "TestData.json";
-    }
-
-    public FileHandlerTests()
-    {
-        _fileSystem = new MockFileSystem();
-    }
+    private static TestClass Get() => new TestClass { Id = 1, Name = "Test" };
+    
+    private static string GetFileName() => "TestData.json";
 
     [Test]
     public void SaveAsJsonFormat_ShouldSaveFileWithoutOptions()
