@@ -7,5 +7,6 @@
     &lt;TestId&gt;NUnit3x::73F7627C-5125-44EA-AF57-17F4D9F5F991::net8.0::ProCSharpTests.SerializationsTests.FileHandlerTests.SaveAsJsonFormat_ShouldSaveFileWithOptions&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::73F7627C-5125-44EA-AF57-17F4D9F5F991::net8.0::ProCSharpTests.SerializationsTests.FileHandlerTests.Load_ShouldLoadFile&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::73F7627C-5125-44EA-AF57-17F4D9F5F991::net8.0::ProCSharpTests.SerializationsTests.FileHandlerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::73F7627C-5125-44EA-AF57-17F4D9F5F991::net8.0::ProCSharpTests.SerializationsTests.StreamSerializerTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

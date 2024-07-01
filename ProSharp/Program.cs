@@ -59,3 +59,5 @@
 // ProcessHandler.ShowThreads();
 
 View.Showcase();
+var data = await StreamSerializer.SerializeAsync(5);
+await StreamSerializer.DeserializeAsync();
