@@ -46,7 +46,7 @@ public class FileHandler<T> where T : new()
         {
             obj = JsonSerializer.Deserialize<T>(jsonString);
         }
-        
+
         return obj;
     }
 }
