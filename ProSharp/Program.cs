@@ -31,8 +31,6 @@
 // SwitchCase.ChooseColor();
 // SwitchCase.PlayRockPaperScissors();
 //
-// Expressions.AddTwoNumbers();
-//
 // MethodParams.ShowAverage();
 //
 // EnumTypes.GetEnumType();
