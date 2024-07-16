@@ -33,10 +33,6 @@
 //
 // MethodParams.ShowAverage();
 //
-// EnumTypes.GetEnumType();
-// EnumTypes.ShowBonus();
-// EnumTypes.AskForContract();
-//
 // ItemDistributor.Distribute();
 //
 // CarAssembler.Assemble();
