@@ -34,15 +34,7 @@
 // MethodParams.ShowAverage();
 //
 // ItemDistributor.Distribute();
-//
-// CarAssembler.Assemble();
-//
-// VehicleAssembler.Assemble();
-// VehicleAssembler.SeeComparison();
-//
-// Canvas.Paint();
-// Canvas.FillContent();
-//
+
 // Defaults.Set();
 // Defaults.ImmediateExecution();
 //
