@@ -4,7 +4,7 @@ namespace ProSharp.Interfaces;
 
 public class FlexBox : IEnumerable
 {
-    private readonly BitmapImage[] _images;
+    private readonly IAdvancedDrawable[] _images;
     public FlexBox()
     {
         _images =
@@ -18,4 +18,8 @@ public class FlexBox : IEnumerable
     
     public IEnumerator GetEnumerator() => _images.GetEnumerator();
     
+    public void Add(IAdvancedDrawable image)
+    {
+        var enumerable = _images.Append(image);
+    }
 }
