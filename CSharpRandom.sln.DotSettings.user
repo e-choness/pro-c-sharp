@@ -5,6 +5,7 @@
     &lt;TestId&gt;NUnit3x::73F7627C-5125-44EA-AF57-17F4D9F5F991::net8.0::ProCSharpTests.Enums.EnumTypesTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::73F7627C-5125-44EA-AF57-17F4D9F5F991::net8.0::ProCSharpTests.Lambda.ExpressionsTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::73F7627C-5125-44EA-AF57-17F4D9F5F991::net8.0::ProCSharpTests.Interfaces.CanvasTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::73F7627C-5125-44EA-AF57-17F4D9F5F991::net8.0::ProCSharpTests.PartialClasses.ItemTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	</wpf:ResourceDictionary>
