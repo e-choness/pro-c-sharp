@@ -31,8 +31,6 @@
 // SwitchCase.ChooseColor();
 // SwitchCase.PlayRockPaperScissors();
 //
-// MethodParams.ShowAverage();
-//
 // ItemDistributor.Distribute();
 
 // Defaults.Set();

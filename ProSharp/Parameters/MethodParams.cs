@@ -4,7 +4,7 @@ namespace ProSharp.Parameters;
 
 public class MethodParams
 {
-    private static double CalculateAverage(params double[] values)
+    public static double CalculateAverage(params double[] values)
     {
         Console.WriteLine("I have {0} doubles.", values.Length);
 
@@ -20,12 +20,5 @@ public class MethodParams
         }
 
         return sum / values.Length;
-    }
-
-    public static void ShowAverage()
-    {
-        Console.WriteLine("=> Show averages using Param");
-        var values = new double[] { 1.0f, 2.0f, 3.0f, 5.0f };
-        Console.WriteLine("{0} average is: {1}", string.Join(" ",values.Select(i=> i.ToString(CultureInfo.InvariantCulture))), CalculateAverage(values));
     }
 }
